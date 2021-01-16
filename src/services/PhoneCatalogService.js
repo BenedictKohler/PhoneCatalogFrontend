@@ -7,27 +7,27 @@ class PhoneCatalogService {
 
     // Returns all phones from the database
     async getCatalog() {
-        return await axios.get('http://localhost:8000/phones');
+        return await axios.get('https://phone-catalog-backend.herokuapp.com/phones');
     }
 
     // Returns a phone by id
     async getPhone(id) {
-        return await axios.get('http://localhost:8000/phone/' + id.toString());
+        return await axios.get('https://phone-catalog-backend.herokuapp.com/phone/' + id.toString());
     }
 
     // Creates a new phone
     async createPhone(data) {
-        await axios.post("http://localhost:8000/phone", data);
+        await axios.post("https://phone-catalog-backend.herokuapp.com/phone", data);
     }
 
     // Updates an existing phone
     async updatePhone(id, data) {
-        return await axios.put('http://localhost:8000/phone/' + id.toString(), data);
+        return await axios.put('https://phone-catalog-backend.herokuapp.com/phone/' + id.toString(), data);
     }
 
     // Deletes a phone by id
     async deletePhone(id) {
-        await axios.delete('http://localhost:8000/phone/' + id.toString());
+        await axios.delete('https://phone-catalog-backend.herokuapp.com/phone/' + id.toString());
     }
 
 }
